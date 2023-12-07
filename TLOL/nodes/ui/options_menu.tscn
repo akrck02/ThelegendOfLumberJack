@@ -1,0 +1,409 @@
+[gd_scene load_steps=22 format=3 uid="uid://bgbfkuifx47te"]
+
+[ext_resource type="Texture2D" uid="uid://bcs18vphqmrew" path="res://sprites/background/pixel.png" id="1_4cpmx"]
+[ext_resource type="Script" path="res://scripts/ui/options_menu.gd" id="1_vkkq5"]
+[ext_resource type="Texture2D" uid="uid://cw5urbu3gu571" path="res://sprites/ui/option_general.png" id="2_ecv2h"]
+[ext_resource type="Shader" path="res://shaders/blur/blur.gdshader" id="2_vjg7i"]
+[ext_resource type="Texture2D" uid="uid://brv7jth7dfq7n" path="res://sprites/ui/option_graphics.png" id="3_tbopv"]
+[ext_resource type="Texture2D" uid="uid://dso2272fwg715" path="res://sprites/ui/option_audio.png" id="4_ki2cj"]
+[ext_resource type="Texture2D" uid="uid://5crvahltuxe" path="res://sprites/ui/option_save.png" id="5_qsxa5"]
+[ext_resource type="Texture2D" uid="uid://dsjkbpcpgfsto" path="res://sprites/ui/option_exit.png" id="6_5lmcq"]
+[ext_resource type="Texture2D" uid="uid://dnvvwhjtl7wy4" path="res://sprites/ui/option_exit_game.png" id="7_sqqwr"]
+[ext_resource type="PackedScene" uid="uid://dtopliaerk6yv" path="res://nodes/ui/general_options_menu.tscn" id="9_a8i01"]
+[ext_resource type="PackedScene" uid="uid://d2vw2b0xduv2q" path="res://nodes/ui/graphics_options_menu.tscn" id="10_phght"]
+[ext_resource type="PackedScene" uid="uid://biwe3n00unwvk" path="res://nodes/ui/audio_options_menu.tscn" id="13_o500a"]
+[ext_resource type="PackedScene" uid="uid://ctfkxxa21t0q6" path="res://nodes/ui/camera_filter.tscn" id="14_7ebej"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ob3c"]
+shader = ExtResource("2_vjg7i")
+shader_parameter/blur = 2.836
+
+[sub_resource type="Animation" id="Animation_07eoq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pixel2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(897.489, 29.2808)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pixel3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1071.28, 1123.17)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:material:shader_parameter/blur")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.836]
+}
+
+[sub_resource type="Animation" id="Animation_s4lyj"]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pixel2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, -200), Vector2(960, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pixel3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 1475), Vector2(960, 1150)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:material:shader_parameter/blur")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.836]
+}
+
+[sub_resource type="Animation" id="Animation_4hlyg"]
+resource_name = "out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pixel2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 90), Vector2(960, -200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pixel3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(960, 1150), Vector2(960, 1150), Vector2(960, 1475)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:material:shader_parameter/blur")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.836, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5lviw"]
+_data = {
+"RESET": SubResource("Animation_07eoq"),
+"in": SubResource("Animation_s4lyj"),
+"out": SubResource("Animation_4hlyg")
+}
+
+[sub_resource type="Animation" id="Animation_h0lqb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6wth8"]
+resource_name = "Save"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.227451), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgo80"]
+_data = {
+"RESET": SubResource("Animation_h0lqb"),
+"Save": SubResource("Animation_6wth8")
+}
+
+[node name="OptionsMenu" type="CanvasLayer"]
+script = ExtResource("1_vkkq5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_1ob3c")
+offset_left = -20.0
+offset_right = 1941.0
+offset_bottom = 1080.0
+texture = ExtResource("1_4cpmx")
+
+[node name="Pixel3" type="Sprite2D" parent="."]
+modulate = Color(0.898039, 0.898039, 0.898039, 1)
+position = Vector2(1071.28, 1123.17)
+scale = Vector2(1920, 410.544)
+texture = ExtResource("1_4cpmx")
+
+[node name="Pixel2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.882353)
+position = Vector2(897.489, 29.2808)
+scale = Vector2(1920, 351.204)
+texture = ExtResource("1_4cpmx")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CameraFilter" parent="Control" instance=ExtResource("14_7ebej")]
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.291
+anchor_bottom = 0.097
+offset_left = 74.0
+offset_top = 32.0
+offset_right = 73.28
+offset_bottom = 39.24
+theme_override_font_sizes/font_size = 70
+text = "Settings"
+
+[node name="Control" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Navbar" type="HBoxContainer" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.101
+anchor_right = 1.0
+anchor_bottom = -0.101
+offset_left = 100.0
+offset_top = 253.08
+offset_right = -298.0
+offset_bottom = 318.08
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GeneralButton" type="Button" parent="Control/Control/Navbar"]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+size_flags_vertical = 0
+text = "General"
+icon = ExtResource("2_ecv2h")
+
+[node name="GraphicsButton" type="Button" parent="Control/Control/Navbar"]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Graphics"
+icon = ExtResource("3_tbopv")
+
+[node name="AudioButton" type="Button" parent="Control/Control/Navbar"]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Audio"
+icon = ExtResource("4_ki2cj")
+
+[node name="ExitButton" type="Button" parent="Control/Control"]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+offset_left = 1693.0
+offset_top = 144.0
+offset_right = 1843.0
+offset_bottom = 209.0
+size_flags_vertical = 0
+text = "Exit menu"
+icon = ExtResource("7_sqqwr")
+
+[node name="GeneralOptionsMenu" parent="Control" instance=ExtResource("9_a8i01")]
+visible = false
+layout_mode = 1
+offset_left = 111.0
+offset_top = 284.0
+offset_right = -77.0
+offset_bottom = -162.0
+
+[node name="GraphicsOptionsMenu" parent="Control" instance=ExtResource("10_phght")]
+visible = false
+layout_mode = 1
+offset_left = 100.0
+offset_top = 284.0
+offset_right = -88.0
+offset_bottom = -162.0
+
+[node name="AudioOptionsMenu" parent="Control" instance=ExtResource("13_o500a")]
+layout_mode = 1
+offset_left = 100.0
+offset_top = 284.0
+offset_right = -88.0
+offset_bottom = -162.0
+
+[node name="ExitBar" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 981.0
+offset_right = 1884.0
+offset_bottom = 1034.0
+alignment = 2
+
+[node name="SaveButton" type="Button" parent="Control/ExitBar"]
+self_modulate = Color(0.301961, 0.721569, 0.443137, 1)
+custom_minimum_size = Vector2(167, 0)
+layout_mode = 2
+text = "Save game"
+icon = ExtResource("5_qsxa5")
+flat = true
+
+[node name="ExitGameButton" type="Button" parent="Control/ExitBar"]
+self_modulate = Color(0.301961, 0.721569, 0.443137, 1)
+custom_minimum_size = Vector2(167, 0)
+layout_mode = 2
+text = "Exit game
+"
+icon = ExtResource("6_5lmcq")
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5lviw")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="SavingGameLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 996.0
+offset_right = 215.0
+offset_bottom = 1022.0
+theme_override_colors/font_color = Color(0.0666667, 0.52549, 0.258824, 1)
+text = "Saving the game..."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SavingGameLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_cgo80")
+}
+
+[connection signal="pressed" from="Control/Control/Navbar/GeneralButton" to="." method="show_menu_option" binds= ["general"]]
+[connection signal="pressed" from="Control/Control/Navbar/GraphicsButton" to="." method="show_menu_option" binds= ["graphics"]]
+[connection signal="pressed" from="Control/Control/Navbar/AudioButton" to="." method="show_menu_option" binds= ["audio"]]
+[connection signal="pressed" from="Control/Control/ExitButton" to="." method="hide_menu"]
+[connection signal="pressed" from="Control/ExitBar/SaveButton" to="." method="save_game"]
+[connection signal="pressed" from="Control/ExitBar/ExitGameButton" to="." method="exit_game"]

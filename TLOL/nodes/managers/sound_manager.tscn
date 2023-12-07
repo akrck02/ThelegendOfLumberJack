@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5pv1tfk88dum"]
+
+[ext_resource type="AudioStream" uid="uid://d17mknyb11f2v" path="res://sounds/effects/door.mp3" id="1_2klre"]
+[ext_resource type="Script" path="res://scripts/managers/sound_manager.gd" id="1_p43jk"]
+[ext_resource type="AudioStream" uid="uid://dlgbc6t3wqpfy" path="res://sounds/effects/coin.mp3" id="3_dw5kh"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_p43jk")
+
+[node name="door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_2klre")
+volume_db = -16.961
+
+[node name="coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dw5kh")

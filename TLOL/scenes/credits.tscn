@@ -1,0 +1,276 @@
+[gd_scene load_steps=18 format=3 uid="uid://cenygf34x8xfw"]
+
+[ext_resource type="Texture2D" uid="uid://dajb88cc1b1j0" path="res://sprites/ui/logo.png" id="1_1hf7c"]
+[ext_resource type="Script" path="res://scripts/levels/credits.gd" id="1_fvwfs"]
+[ext_resource type="Texture2D" uid="uid://dfkahac87xqdd" path="res://sprites/credits/akrck02.png" id="2_7bcmd"]
+[ext_resource type="Texture2D" uid="uid://bucsd8ghwbmef" path="res://sprites/credits/andoru.png" id="3_i0jvs"]
+[ext_resource type="Texture2D" uid="uid://cv52om3tyv7wk" path="res://sprites/credits/fernando.png" id="4_i84tc"]
+[ext_resource type="Texture2D" uid="uid://bppww4mq610st" path="res://sprites/credits/rayxnor.png" id="5_oqjm2"]
+[ext_resource type="Texture2D" uid="uid://dhu44pydpj2fg" path="res://sprites/credits/rebe.png" id="6_f1ggy"]
+[ext_resource type="Texture2D" uid="uid://c3knch8vmw2ng" path="res://sprites/credits/sky.png" id="7_83lrj"]
+[ext_resource type="Texture2D" uid="uid://b3a88mrc8r4mq" path="res://sprites/characters/Shadow.png" id="9_rlat5"]
+[ext_resource type="Texture2D" uid="uid://d2bgcmr2ug8x2" path="res://sprites/characters/player.png" id="9_wxb3m"]
+[ext_resource type="Texture2D" uid="uid://gqwqymg24ah2" path="res://sprites/characters/girl.png" id="10_5wlrf"]
+[ext_resource type="Texture2D" uid="uid://cxohb61cuo1xh" path="res://sprites/enemies/crab.png" id="12_mk67a"]
+[ext_resource type="Texture2D" uid="uid://bcs18vphqmrew" path="res://sprites/background/pixel.png" id="13_3r32x"]
+[ext_resource type="Texture2D" uid="uid://bfjvlvthufgq3" path="res://sprites/credits/NightlightStudiosLogo.png" id="14_yowap"]
+
+[sub_resource type="Animation" id="Animation_vform"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-963, -545)]
+}
+
+[sub_resource type="Animation" id="Animation_fl4cq"]
+resource_name = "credits"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 7.4, 10, 15.5, 19.3, 25.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-963, -545), Vector2(-963, -545), Vector2(-965, 542), Vector2(-965, 542), Vector2(-954, 1665), Vector2(-954, 1665), Vector2(-965, 2873)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pa2w"]
+_data = {
+"RESET": SubResource("Animation_vform"),
+"credits": SubResource("Animation_fl4cq")
+}
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_fvwfs")
+
+[node name="Logo" type="Node2D" parent="."]
+
+[node name="Logo" type="Sprite2D" parent="Logo"]
+position = Vector2(-981, -615)
+scale = Vector2(0.330179, 0.330179)
+texture = ExtResource("1_1hf7c")
+
+[node name="Crab" type="Node2D" parent="Logo"]
+position = Vector2(26, 5)
+metadata/_edit_group_ = true
+
+[node name="Shadow3" type="Sprite2D" parent="Logo/Crab"]
+position = Vector2(-694, -377)
+scale = Vector2(1.07, 1.07)
+texture = ExtResource("9_rlat5")
+
+[node name="Crab" type="Sprite2D" parent="Logo/Crab"]
+position = Vector2(-696, -383)
+scale = Vector2(0.886667, 0.886667)
+texture = ExtResource("12_mk67a")
+hframes = 4
+
+[node name="Girl" type="Node2D" parent="Logo"]
+metadata/_edit_group_ = true
+
+[node name="Shadow2" type="Sprite2D" parent="Logo/Girl"]
+position = Vector2(-1207, -362)
+scale = Vector2(0.99, 0.99)
+texture = ExtResource("9_rlat5")
+
+[node name="Girl" type="Sprite2D" parent="Logo/Girl"]
+position = Vector2(-1207, -408)
+scale = Vector2(0.953333, 0.953333)
+texture = ExtResource("10_5wlrf")
+hframes = 4
+vframes = 4
+
+[node name="Player" type="Node2D" parent="Logo"]
+metadata/_edit_group_ = true
+
+[node name="Shadow" type="Sprite2D" parent="Logo/Player"]
+position = Vector2(-1335, -372)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("9_rlat5")
+
+[node name="Player" type="Sprite2D" parent="Logo/Player"]
+position = Vector2(-1335, -432)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("9_wxb3m")
+hframes = 4
+vframes = 4
+
+[node name="Stuff" type="Node2D" parent="."]
+position = Vector2(-965, 542)
+
+[node name="Development department" type="Label" parent="Stuff"]
+offset_left = -278.0
+offset_top = -476.0
+offset_right = 303.0
+offset_bottom = -409.0
+theme_override_colors/font_color = Color(0.780392, 0.882353, 0.952941, 1)
+theme_override_font_sizes/font_size = 46
+text = "DEVELOPMENT"
+horizontal_alignment = 1
+
+[node name="Akrck02Pic" type="Sprite2D" parent="Stuff/Development department"]
+position = Vector2(104.062, 243.062)
+scale = Vector2(0.487228, 0.487228)
+texture = ExtResource("2_7bcmd")
+
+[node name="Akrck02Label" type="Label" parent="Stuff/Development department"]
+layout_mode = 0
+offset_left = -7.49756
+offset_top = 386.624
+offset_right = 218.502
+offset_bottom = 453.624
+theme_override_font_sizes/font_size = 35
+text = "Arkck02"
+horizontal_alignment = 1
+
+[node name="AndoruPic" type="Sprite2D" parent="Stuff/Development department"]
+position = Vector2(470, 244.5)
+scale = Vector2(0.48913, 0.48913)
+texture = ExtResource("3_i0jvs")
+
+[node name="AndoruLabel2" type="Label" parent="Stuff/Development department"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 396.0
+offset_right = 945.0
+offset_bottom = 463.0
+theme_override_font_sizes/font_size = 35
+text = "Fernando"
+horizontal_alignment = 1
+
+[node name="AndoruLabel" type="Label" parent="Stuff/Development department"]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 387.5
+offset_right = 583.0
+offset_bottom = 454.5
+theme_override_font_sizes/font_size = 35
+text = "Andoruelric"
+horizontal_alignment = 1
+
+[node name="Fernando" type="Sprite2D" parent="Stuff/Development department"]
+position = Vector2(813, 243)
+scale = Vector2(0.511136, 0.511136)
+texture = ExtResource("4_i84tc")
+
+[node name="RayxnorPic" type="Sprite2D" parent="Stuff/Development department"]
+position = Vector2(-275, 241.071)
+scale = Vector2(0.491304, 0.491304)
+texture = ExtResource("5_oqjm2")
+
+[node name="RayxnorLabel" type="Label" parent="Stuff/Development department"]
+layout_mode = 0
+offset_left = -395.0
+offset_top = 381.0
+offset_right = -153.0
+offset_bottom = 448.0
+theme_override_font_sizes/font_size = 35
+text = "Rayxnor"
+horizontal_alignment = 1
+
+[node name="Artistic department" type="Label" parent="Stuff"]
+offset_left = -282.0
+offset_top = 28.0
+offset_right = 299.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.780392, 0.882353, 0.952941, 1)
+theme_override_font_sizes/font_size = 46
+text = "ART"
+horizontal_alignment = 1
+
+[node name="RebePic" type="Sprite2D" parent="Stuff/Artistic department"]
+position = Vector2(0, 219.265)
+scale = Vector2(0.490217, 0.490217)
+texture = ExtResource("6_f1ggy")
+
+[node name="RebeLabel" type="Label" parent="Stuff/Artistic department"]
+layout_mode = 0
+offset_left = -115.0
+offset_top = 347.265
+offset_right = 111.0
+offset_bottom = 414.265
+theme_override_font_sizes/font_size = 35
+text = "Rebe"
+horizontal_alignment = 1
+
+[node name="AndoruPic" type="Sprite2D" parent="Stuff/Artistic department"]
+position = Vector2(305, 212.265)
+scale = Vector2(0.483761, 0.483761)
+texture = ExtResource("3_i0jvs")
+
+[node name="AndoruLabel" type="Label" parent="Stuff/Artistic department"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 345.265
+offset_right = 411.0
+offset_bottom = 412.265
+theme_override_font_sizes/font_size = 35
+text = "Andoruelric"
+horizontal_alignment = 1
+
+[node name="SkyPic" type="Sprite2D" parent="Stuff/Artistic department"]
+position = Vector2(592, 216.265)
+scale = Vector2(0.49606, 0.49606)
+texture = ExtResource("7_83lrj")
+
+[node name="AndoruLabel2" type="Label" parent="Stuff/Artistic department"]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 350.265
+offset_right = 703.0
+offset_bottom = 417.265
+theme_override_font_sizes/font_size = 35
+text = "Skylerie"
+horizontal_alignment = 1
+
+[node name="NightlightStudios" type="Node2D" parent="."]
+
+[node name="Pixel" type="Sprite2D" parent="NightlightStudios"]
+position = Vector2(-954.5, 1668)
+scale = Vector2(1919, 1086)
+texture = ExtResource("13_3r32x")
+
+[node name="NightlightStudiosLogo" type="Sprite2D" parent="NightlightStudios/Pixel"]
+position = Vector2(-0.00911933, -0.0436234)
+scale = Vector2(7.08442e-05, 0.000125184)
+texture = ExtResource("14_yowap")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1205.0
+offset_top = 1856.0
+offset_right = -711.0
+offset_bottom = 1924.0
+theme_override_colors/font_color = Color(0.329412, 0.329412, 0.329412, 1)
+theme_override_font_sizes/font_size = 47
+text = "NIGHTLIGHT STUDIOS"
+horizontal_alignment = 1
+
+[node name="End" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="End"]
+offset_left = -1181.0
+offset_top = 2816.0
+offset_right = -767.0
+offset_bottom = 2956.0
+theme_override_font_sizes/font_size = 100
+text = "The end."
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-963, -545)
+
+[node name="CameraAnimator" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_5pa2w")
+}

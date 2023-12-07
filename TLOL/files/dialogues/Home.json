@@ -1,0 +1,12 @@
+{
+	"Mary" : {
+		"start" : [
+			"Hi dad. I like this place :)",
+			"There is a crab outside, I'm scared :("
+		],
+		"end" : [
+			"Hi dad. The crab is gone",
+			"Thank you!"
+		]
+	}
+}

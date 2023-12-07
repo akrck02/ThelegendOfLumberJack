@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://166t3oqcpl2f"]
+
+[ext_resource type="Shader" path="res://shaders/grainy/grainy.gdshader" id="1_q8nbo"]
+
+[resource]
+shader = ExtResource("1_q8nbo")
+shader_parameter/scan_line_count = 200.0
+shader_parameter/is_grayscale = false

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d10s7r6d08qs0"]
+
+[ext_resource type="Shader" path="res://shaders/scanlines/scanlines.gdshader" id="1_264k5"]
+
+[resource]
+shader = ExtResource("1_264k5")
+shader_parameter/scan_line_count = 236.784
+shader_parameter/is_grayscale = true

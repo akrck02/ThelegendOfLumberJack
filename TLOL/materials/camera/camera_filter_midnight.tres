@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c4lfhhrr4sa52"]
+
+[ext_resource type="Shader" path="res://shaders/midnight/midnight.gdshader" id="1_ajs7d"]
+
+[resource]
+shader = ExtResource("1_ajs7d")

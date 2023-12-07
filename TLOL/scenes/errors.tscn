@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://f8125455to33"]
+
+[ext_resource type="Texture2D" uid="uid://bcs18vphqmrew" path="res://sprites/background/pixel.png" id="1_r3cff"]
+[ext_resource type="FontVariation" uid="uid://b3e6p50lhmld2" path="res://fonts/inter.tres" id="2_tag1u"]
+
+[node name="Errors" type="Node2D"]
+
+[node name="Pixel" type="Sprite2D" parent="."]
+position = Vector2(961, 541)
+scale = Vector2(1924, 1082)
+texture = ExtResource("1_r3cff")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 34.0
+offset_right = 876.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0, 0, 0.207843)
+theme_override_fonts/font = ExtResource("2_tag1u")
+theme_override_font_sizes/font_size = 50
+text = "Unexpected error while executing..."
+
+[node name="Code" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 125.0
+offset_right = 686.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Code:"
+
+[node name="CodeContent" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 126.0
+offset_right = 669.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.458824, 0.458824, 0.458824, 1)
+theme_override_font_sizes/font_size = 32
+text = "00000"
+
+[node name="Description" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 173.0
+offset_right = 686.0
+offset_bottom = 221.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Description:"
+
+[node name="DescriptionContent" type="Label" parent="."]
+offset_left = 254.0
+offset_top = 173.0
+offset_right = 1417.0
+offset_bottom = 986.0
+theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
+theme_override_font_sizes/font_size = 32
+text = "No description provided."

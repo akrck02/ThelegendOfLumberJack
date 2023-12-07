@@ -1,0 +1,173 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6rly401ohbsc"]
+
+[ext_resource type="TileSet" uid="uid://d0xxog5gi7xm3" path="res://tileset/default.tres" id="1_5v6n8"]
+[ext_resource type="Texture2D" uid="uid://dajb88cc1b1j0" path="res://sprites/ui/logo.png" id="2_goy7j"]
+[ext_resource type="Script" path="res://scripts/levels/start_menu.gd" id="2_vdl12"]
+[ext_resource type="FontVariation" uid="uid://b3e6p50lhmld2" path="res://fonts/inter.tres" id="3_5pw68"]
+[ext_resource type="Texture2D" uid="uid://ms6n181o5ote" path="res://sprites/ui/remake.png" id="4_aiij2"]
+[ext_resource type="Texture2D" uid="uid://d2bgcmr2ug8x2" path="res://sprites/characters/player.png" id="4_jouxj"]
+[ext_resource type="PackedScene" uid="uid://ctfkxxa21t0q6" path="res://nodes/ui/camera_filter.tscn" id="7_8qbc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxyng"]
+bg_color = Color(1, 1, 1, 0.223529)
+border_color = Color(0, 0, 0, 0.0352941)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.737255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6msjj"]
+bg_color = Color(1, 1, 1, 0.360784)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vamss"]
+bg_color = Color(1, 1, 1, 0.184314)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="StartMenu" type="TileMap"]
+texture_filter = 1
+position = Vector2(-20, -63)
+tile_set = ExtResource("1_5v6n8")
+cell_quadrant_size = 100
+format = 2
+layer_0/name = "Floor"
+layer_0/z_index = 2
+layer_0/tile_data = PackedInt32Array(131072, 196609, 3, 131073, 65537, 3, 131074, 196609, 3, 131075, 65537, 3, 131076, 262145, 3, 131077, 262145, 3, 131078, 262145, 3, 131079, 196609, 3, 131080, 196609, 3, 131081, 196609, 3, 131082, 65537, 3, 131083, 196609, 3, 196607, 65537, 3, 131084, 65537, 3, 0, 262145, 1, 65536, 65537, 1, 1, 262145, 2, 65537, 196609, 2, 2, 131073, 2, 65538, 262145, 2, 3, 262145, 2, 65539, 262145, 2, 4, 262145, 2, 65540, 65537, 2, 5, 262145, 2, 65541, 262145, 1, 6, 196609, 1, 65542, 262145, 2, 7, 262145, 2, 65543, 262145, 1, 8, 262145, 2, 65544, 196609, 1, 9, 262145, 2, 65545, 65537, 2, 10, 196609, 1, 65546, 262145, 1, 11, 262145, 2, 65547, 262145, 2, 65535, 196609, 2, 131071, 262145, 2, 12, 262145, 2, 65548, 65537, 1, -65536, 262145, 2, -65535, 262145, 1, -65534, 262145, 2, -65533, 262145, 2, -65532, 196609, 2, -65531, 196609, 1, -65530, 262145, 2, -65529, 262145, 2, -65528, 131073, 1, -65527, 262145, 2, -65526, 262145, 2, -65525, 262145, 1, -65524, 262145, 2, -1, 262145, 2, 131085, 327681, 3, 13, 327681, 1, 65549, 327681, 2, -65523, 327681, 1, -65537, 196609, 0, -65538, 1, 0, -2, 1, 1, 65534, 1, 1, 131070, 1, 1, 196606, 1, 3, -131072, 65537, 0, -131071, 131073, 0, -131070, 196609, 0, -131069, 131073, 0, -131068, 65537, 0, -131067, 262145, 0, -131066, 65537, 0, -131065, 196609, 0, -131064, 196609, 0, -131063, 262145, 0, -131062, 65537, 0, -131061, 131073, 0, -131060, 131073, 0, -131059, 327681, 0)
+layer_1/name = "Ground"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(262144, 65537, 7, 262145, 65537, 7, 262146, 131073, 7, 262147, 262145, 7, 262148, 262145, 7, 262149, 262145, 7, 262150, 262145, 7, 262151, 65537, 7, 262152, 65537, 7, 262153, 262145, 7, 262154, 196609, 7, 262155, 262145, 7, 262156, 65537, 7, 327679, 131073, 7, 196608, 262145, 6, 196609, 262145, 6, 196610, 196609, 6, 196611, 262145, 6, 196612, 65537, 6, 196613, 65537, 6, 196614, 131073, 6, 196615, 131073, 6, 196616, 262145, 6, 196617, 196609, 6, 196618, 65537, 6, 196619, 196609, 6, 196620, 262145, 6, 262143, 196609, 6, 131072, 262145, 4, 131073, 262145, 4, 131074, 262145, 4, 131075, 196609, 4, 131076, 131073, 4, 131077, 262145, 4, 131078, 196609, 4, 131079, 196609, 4, 131080, 196609, 4, 131081, 262145, 4, 131082, 196609, 4, 131083, 262145, 4, 131084, 196609, 4, 196607, 65537, 4, 196621, 327681, 5, 131085, 327681, 4, 262157, 327681, 7, 262142, 1, 5, 196606, 1, 4, 327678, 1, 7)
+layer_2/name = "Sea"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array(262144, 655361, 0, 327680, 458753, 1, 393216, 655361, 1, 262145, 458753, 0, 327681, 524289, 1, 393217, 655361, 1, 262146, 524289, 0, 327682, 524289, 1, 393218, 458753, 1, 262147, 589825, 0, 327683, 524289, 1, 393219, 655361, 1, 262148, 524289, 0, 327684, 655361, 1, 393220, 655361, 1, 262149, 655361, 0, 327685, 458753, 1, 393221, 655361, 1, 262150, 458753, 0, 327686, 458753, 2, 393222, 655361, 1, 262151, 458753, 0, 327687, 524289, 2, 393223, 589825, 1, 262152, 524289, 0, 327688, 655361, 2, 393224, 589825, 1, 262153, 524289, 0, 327689, 655361, 2, 393225, 458753, 1, 262154, 458753, 0, 327690, 589825, 1, 393226, 524289, 1, 262155, 655361, 0, 327691, 589825, 1, 393227, 655361, 1, 262156, 589825, 0, 327692, 655361, 1, 393228, 589825, 2, 262157, 720897, 0, 327693, 720897, 1, 393229, 720897, 2, 458765, 720897, 3, 458764, 655361, 3, 458763, 655361, 3, 458762, 655361, 3, 458761, 655361, 3, 458760, 655361, 3, 458759, 655361, 3, 458758, 655361, 3, 458757, 655361, 3, 458756, 655361, 3, 458755, 655361, 3, 458754, 655361, 3, 458753, 655361, 3, 458752, 655361, 3, 327678, 393217, 0, 524286, 393217, 3, 458750, 393217, 2, 393214, 393217, 1, 393215, 524289, 2, 458751, 524289, 2, 524287, 589825, 3, 327679, 524289, 0)
+script = ExtResource("2_vdl12")
+
+[node name="CameraFilter" parent="." instance=ExtResource("7_8qbc6")]
+
+[node name="Buttons" type="Control" parent="."]
+z_index = 3
+layout_mode = 3
+anchors_preset = 0
+offset_top = -2.0
+offset_right = 40.0
+offset_bottom = 38.0
+
+[node name="LoadGame" type="Button" parent="Buttons"]
+texture_filter = 5
+layout_mode = 0
+offset_left = 385.0
+offset_top = 267.0
+offset_right = 645.0
+offset_bottom = 351.0
+scale = Vector2(1.92, 1.89625)
+theme_override_fonts/font = ExtResource("3_5pw68")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_lxyng")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6msjj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vamss")
+
+[node name="PlayerSprite" type="Sprite2D" parent="Buttons/LoadGame"]
+position = Vector2(41.1458, 42.716)
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("4_jouxj")
+hframes = 4
+vframes = 4
+
+[node name="Time" type="Label" parent="Buttons/LoadGame"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = 25.0
+offset_right = 434.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.257455, 0.249622)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_5pw68")
+theme_override_font_sizes/font_size = 65
+text = "0:00h"
+horizontal_alignment = 2
+
+[node name="Coins" type="Label" parent="Buttons/LoadGame"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 50.0
+offset_right = 456.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_5pw68")
+theme_override_font_sizes/font_size = 65
+text = "000 €"
+horizontal_alignment = 2
+
+[node name="NewGame" type="Button" parent="Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 570.0
+offset_top = 466.0
+offset_right = 646.0
+offset_bottom = 491.0
+scale = Vector2(1.96, 1.96)
+theme_override_fonts/font = ExtResource("3_5pw68")
+theme_override_font_sizes/font_size = 13
+
+[node name="Label" type="Label" parent="Buttons/NewGame"]
+layout_mode = 0
+offset_left = 5.61224
+offset_top = 4.08167
+offset_right = 165.612
+offset_bottom = 46.0817
+scale = Vector2(0.406695, 0.406695)
+theme_override_fonts/font = ExtResource("3_5pw68")
+theme_override_font_sizes/font_size = 31
+text = "New Game"
+
+[node name="Logo" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 5
+texture_repeat = 1
+position = Vector2(638.997, 180.295)
+scale = Vector2(0.247794, 0.257741)
+texture = ExtResource("2_goy7j")
+
+[node name="Remake" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(870.997, 149.295)
+rotation = 0.482765
+scale = Vector2(0.365574, 0.351852)
+texture = ExtResource("4_aiij2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(602, 322)
+zoom = Vector2(1.45, 1.45)
+
+[connection signal="pressed" from="Buttons/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Buttons/NewGame" to="." method="_on_new_game_pressed"]

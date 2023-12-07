@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://qgvhpd8uigmx"]
+
+[ext_resource type="Material" uid="uid://d10s7r6d08qs0" path="res://materials/camera/camera_filter_scanlines.tres" id="2_2ot5d"]
+[ext_resource type="Material" uid="uid://c46h606siwf0b" path="res://materials/camera/camera_filter_grayscale.tres" id="2_mosxw"]
+[ext_resource type="Texture2D" uid="uid://cbodu5louss0c" path="res://sprites/tiles/overworld.png" id="2_pp58s"]
+[ext_resource type="Material" uid="uid://18wsdaf5y3wk" path="res://materials/camera/camera_filter_none.tres" id="2_suaf2"]
+[ext_resource type="Texture2D" uid="uid://bcs18vphqmrew" path="res://sprites/background/pixel.png" id="4_o2e82"]
+[ext_resource type="Shader" path="res://shaders/test.gdshader" id="5_2416i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3qnh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oyx8h"]
+shader = ExtResource("5_2416i")
+
+[node name="Test" type="Node2D"]
+
+[node name="Overworld2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q3qnh")
+position = Vector2(2876, 588)
+scale = Vector2(1.50333, 1.31625)
+texture = ExtResource("2_pp58s")
+
+[node name="Overworld" type="Sprite2D" parent="."]
+material = ExtResource("2_suaf2")
+position = Vector2(3170, 591)
+scale = Vector2(1.50333, 1.31625)
+texture = ExtResource("2_pp58s")
+
+[node name="Test3" type="Sprite2D" parent="."]
+z_index = 10
+material = SubResource("ShaderMaterial_oyx8h")
+position = Vector2(2853, 570)
+scale = Vector2(1698, -962)
+texture = ExtResource("4_o2e82")
+
+[node name="Test2" type="Sprite2D" parent="."]
+z_index = 10
+material = ExtResource("2_2ot5d")
+position = Vector2(4158, 334)
+rotation = -0.00401862
+scale = Vector2(573.335, 394.735)
+skew = -0.00324202
+texture = ExtResource("4_o2e82")
+
+[node name="Test" type="Sprite2D" parent="."]
+z_index = 10
+material = ExtResource("2_mosxw")
+position = Vector2(1576, 796)
+rotation = -0.00258685
+scale = Vector2(768.251, 425.21)
+texture = ExtResource("4_o2e82")

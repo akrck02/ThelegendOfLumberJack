@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://b3e6p50lhmld2"]
+
+[ext_resource type="FontFile" uid="uid://bn1isepn63da2" path="res://fonts/Inter.ttf" id="1_dcsjo"]
+
+[resource]
+base_font = ExtResource("1_dcsjo")

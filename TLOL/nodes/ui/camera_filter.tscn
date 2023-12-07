@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctfkxxa21t0q6"]
+
+[ext_resource type="Script" path="res://scripts/ui/camera_filter.gd" id="1_flkmm"]
+[ext_resource type="Material" uid="uid://d10s7r6d08qs0" path="res://materials/camera/camera_filter_scanlines.tres" id="2_vcfd7"]
+[ext_resource type="Texture2D" uid="uid://bcs18vphqmrew" path="res://sprites/background/pixel.png" id="3_dmvor"]
+
+[node name="CameraFilter" type="CanvasLayer"]
+script = ExtResource("1_flkmm")
+
+[node name="Filter" type="Sprite2D" parent="."]
+z_index = 100
+z_as_relative = false
+material = ExtResource("2_vcfd7")
+position = Vector2(959.132, 542.372)
+rotation = -0.00258685
+scale = Vector2(1937.88, 1106.28)
+texture = ExtResource("3_dmvor")

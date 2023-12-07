@@ -1,0 +1,202 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2vw2b0xduv2q"]
+
+[ext_resource type="Script" path="res://scripts/ui/graphics_options_menu.gd" id="1_j7hsr"]
+[ext_resource type="Texture2D" uid="uid://chul7ko8ni0g" path="res://sprites/ui/option_camera_effect_none.png" id="2_t2ltc"]
+[ext_resource type="Texture2D" uid="uid://b5mbn4fc51aia" path="res://sprites/ui/option_camera_effect_grayscale.png" id="3_mjs36"]
+[ext_resource type="Texture2D" uid="uid://cqrc3nn2272j6" path="res://sprites/ui/option_camera_effect_scanlines.png" id="4_dlg12"]
+[ext_resource type="Texture2D" uid="uid://dyuallr5882sf" path="res://sprites/ui/option_camera_effect_midnight.png" id="4_xdmd2"]
+[ext_resource type="Texture2D" uid="uid://cwtgq25j8yf50" path="res://sprites/ui/option_camera_effect_grainy.png" id="6_g20mk"]
+[ext_resource type="Texture2D" uid="uid://cc0qna6ubxwjw" path="res://sprites/ui/option_camera_effect_cozy.png" id="7_5qfgn"]
+
+[node name="GraphicsOptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -189.0
+offset_bottom = -446.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j7hsr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.029
+anchor_right = 0.107
+anchor_bottom = 0.063
+offset_left = -7.72
+offset_top = 20.68
+offset_right = -7.44002
+offset_bottom = 20.96
+theme_override_font_sizes/font_size = 24
+text = "Camera effect: "
+
+[node name="NoEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.115
+anchor_right = 0.092
+anchor_bottom = 0.273
+offset_left = -1.784
+offset_top = 27.09
+offset_right = -0.344009
+offset_bottom = 35.918
+
+[node name="OptionCameraEffectNone" type="Sprite2D" parent="NoEffectButton"]
+position = Vector2(70.104, 41.78)
+texture = ExtResource("2_t2ltc")
+
+[node name="Label" type="Label" parent="NoEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.213
+anchor_top = 0.635
+anchor_right = 0.802
+anchor_bottom = 0.788
+offset_left = -32.9249
+offset_top = -0.00844574
+offset_right = 31.0292
+offset_bottom = -0.0325317
+text = "NONE"
+horizontal_alignment = 1
+
+[node name="ScanlineEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.16
+anchor_right = 0.178
+anchor_bottom = 0.32
+offset_left = -0.735992
+offset_top = -0.439995
+offset_right = 0.703979
+offset_bottom = 6.12
+
+[node name="OptionCameraEffectScanlines" type="Sprite2D" parent="ScanlineEffectButton"]
+position = Vector2(70, 39)
+texture = ExtResource("4_dlg12")
+
+[node name="Label" type="Label" parent="ScanlineEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_top = 68.0
+offset_bottom = -13.892
+text = "SCANLINES"
+horizontal_alignment = 1
+
+[node name="MidnightEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.16
+anchor_right = 0.178
+anchor_bottom = 0.32
+offset_left = 450.264
+offset_top = 0.560005
+offset_right = 451.704
+offset_bottom = 7.12
+
+[node name="OptionCameraEffectScanlines-1" type="Sprite2D" parent="MidnightEffectButton"]
+position = Vector2(67, 44)
+texture = ExtResource("4_xdmd2")
+
+[node name="Label" type="Label" parent="MidnightEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_top = 68.0
+offset_bottom = -18.887
+text = "MIDNIGHT"
+horizontal_alignment = 1
+
+[node name="GrayscaleEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.16
+anchor_right = 0.178
+anchor_bottom = 0.32
+offset_left = 300.264
+offset_top = 0.55999
+offset_right = 301.704
+offset_bottom = 7.11998
+
+[node name="OptionCameraEffectScanlines-1" type="Sprite2D" parent="GrayscaleEffectButton"]
+position = Vector2(67, 44)
+texture = ExtResource("3_mjs36")
+
+[node name="Label" type="Label" parent="GrayscaleEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_top = 68.0
+offset_bottom = -18.887
+text = "GRAYSCALE"
+horizontal_alignment = 1
+
+[node name="GrainyEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.16
+anchor_right = 0.178
+anchor_bottom = 0.32
+offset_left = 151.264
+offset_top = -0.439995
+offset_right = 152.704
+offset_bottom = 6.12
+
+[node name="OptionCameraEffectScanlines" type="Sprite2D" parent="GrainyEffectButton"]
+position = Vector2(70, 38.52)
+texture = ExtResource("6_g20mk")
+
+[node name="Label" type="Label" parent="GrainyEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_top = 68.0
+offset_bottom = -13.892
+text = "GRAINY"
+horizontal_alignment = 1
+
+[node name="PastelEffectButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.16
+anchor_right = 0.178
+anchor_bottom = 0.32
+offset_left = -149.736
+offset_top = 116.56
+offset_right = -148.296
+offset_bottom = 123.12
+
+[node name="OptionCameraEffectScanlines" type="Sprite2D" parent="PastelEffectButton"]
+position = Vector2(70, 38.52)
+texture = ExtResource("7_5qfgn")
+
+[node name="Label" type="Label" parent="PastelEffectButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_top = 68.0
+offset_bottom = -13.892
+text = "COZY"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="NoEffectButton" to="." method="set_effect" binds= ["none"]]
+[connection signal="pressed" from="ScanlineEffectButton" to="." method="set_effect" binds= ["scanlines"]]
+[connection signal="pressed" from="MidnightEffectButton" to="." method="set_effect" binds= ["midnight"]]
+[connection signal="pressed" from="GrayscaleEffectButton" to="." method="set_effect" binds= ["grayscale"]]
+[connection signal="pressed" from="GrainyEffectButton" to="." method="set_effect" binds= ["grainy"]]
+[connection signal="pressed" from="PastelEffectButton" to="." method="set_effect" binds= ["cozy"]]

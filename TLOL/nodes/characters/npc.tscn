@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://baqpdvreyw2su"]
+
+[ext_resource type="Script" path="res://scripts/characters/npc.gd" id="1_5hdd6"]
+[ext_resource type="Texture2D" uid="uid://gqwqymg24ah2" path="res://sprites/characters/girl.png" id="1_yvsqm"]
+[ext_resource type="Texture2D" uid="uid://ioo4n8h5tn2u" path="res://sprites/ui/InteractIcon.png" id="2_oowgv"]
+[ext_resource type="Texture2D" uid="uid://b3a88mrc8r4mq" path="res://sprites/characters/Shadow.png" id="4_joomx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_028lf"]
+size = Vector2(79, 32)
+
+[node name="NPC" type="CharacterBody2D" groups=["Interactable"]]
+script = ExtResource("1_5hdd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(75, -75)
+texture = ExtResource("1_yvsqm")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(75.5, -79)
+shape = SubResource("RectangleShape2D_028lf")
+debug_color = Color(0.898039, 0.952941, 0.94902, 0.105882)
+
+[node name="InteractIcon" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(76, -158)
+scale = Vector2(0.606667, 0.606667)
+texture = ExtResource("2_oowgv")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(76, -31)
+scale = Vector2(1.20667, 1.20667)
+texture = ExtResource("4_joomx")
